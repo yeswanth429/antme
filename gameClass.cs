@@ -204,6 +204,12 @@ namespace AntMe.Player.game
             }
             else
             {
+                // Before running away from the bug, we will mark the territory
+                MakeMark(2);
+                // Instead of just going away from the bug, we will turn around 180 degree and then go away
+                // So the chances of getting in the view area of the bug is very less
+                TurnAround();
+
                 GoAwayFrom(bug);
             }
         }
